@@ -26,195 +26,136 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        bData = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        bBeranda = new javax.swing.JButton();
-        menuPanel = new javax.swing.JPanel();
-        lRuangan = new javax.swing.JLabel();
-        lPeminjaman = new javax.swing.JLabel();
-        panelKonten = new javax.swing.JPanel();
+        p_nav = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        p_side = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        menus = new javax.swing.JPanel();
+        bKeluar = new javax.swing.JButton();
+        bRuangan = new javax.swing.JButton();
+        bRiwayat = new javax.swing.JButton();
+        p_content = new javax.swing.JPanel();
+        pMain = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(800, 600));
-        jPanel3.setLayout(null);
+        p_nav.setBackground(new java.awt.Color(0, 102, 204));
+        p_nav.setPreferredSize(new java.awt.Dimension(800, 75));
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel1.setText("Pinjam");
 
-        bData.setText("Master Data");
-        bData.setBorder(null);
-        bData.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bData.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bDataMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bDataMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                bDataMouseExited(evt);
-            }
-        });
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel2.setText("RuangSYS");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel3.setText("Pinjam");
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        jLabel4.setText("RuangSYS");
-
-        bBeranda.setText("Beranda");
-        bBeranda.setBorder(null);
-        bBeranda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bBeranda.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bBerandaMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bBerandaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                bBerandaMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout p_navLayout = new javax.swing.GroupLayout(p_nav);
+        p_nav.setLayout(p_navLayout);
+        p_navLayout.setHorizontalGroup(
+            p_navLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_navLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(p_navLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(p_navLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel4)))
-                .addGap(97, 97, 97)
-                .addComponent(bBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(bData, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(436, Short.MAX_VALUE))
+                        .addComponent(jLabel2))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(699, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(bData, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(bBeranda, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        p_navLayout.setVerticalGroup(
+            p_navLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_navLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jPanel3.add(jPanel4);
-        jPanel4.setBounds(0, 0, 800, 60);
+        getContentPane().add(p_nav, java.awt.BorderLayout.PAGE_START);
 
-        menuPanel.setBackground(new java.awt.Color(0, 153, 153));
-        menuPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                menuPanelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                menuPanelMouseExited(evt);
+        p_side.setPreferredSize(new java.awt.Dimension(200, 525));
+
+        menus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bKeluar.setText("Keluar");
+        bKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bKeluarActionPerformed(evt);
             }
         });
+        menus.add(bKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 150, 40));
 
-        lRuangan.setText("Data Ruangan");
-        lRuangan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bRuangan.setText("List Ruangan");
+        bRuangan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRuanganActionPerformed(evt);
+            }
+        });
+        menus.add(bRuangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 150, 40));
 
-        lPeminjaman.setText("Data Peminjaman");
-        lPeminjaman.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bRiwayat.setText("Riwayat");
+        bRiwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRiwayatActionPerformed(evt);
+            }
+        });
+        menus.add(bRiwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 150, 40));
 
-        javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
-        menuPanel.setLayout(menuPanelLayout);
-        menuPanelLayout.setHorizontalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lPeminjaman, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                    .addComponent(lRuangan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        jScrollPane1.setViewportView(menus);
+
+        javax.swing.GroupLayout p_sideLayout = new javax.swing.GroupLayout(p_side);
+        p_side.setLayout(p_sideLayout);
+        p_sideLayout.setHorizontalGroup(
+            p_sideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(p_sideLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        menuPanelLayout.setVerticalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(lRuangan, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lPeminjaman)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        p_sideLayout.setVerticalGroup(
+            p_sideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 525, Short.MAX_VALUE)
         );
 
-        jPanel3.add(menuPanel);
-        menuPanel.setBounds(290, 40, 120, 0);
+        getContentPane().add(p_side, java.awt.BorderLayout.LINE_START);
 
-        javax.swing.GroupLayout panelKontenLayout = new javax.swing.GroupLayout(panelKonten);
-        panelKonten.setLayout(panelKontenLayout);
-        panelKontenLayout.setHorizontalGroup(
-            panelKontenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        panelKontenLayout.setVerticalGroup(
-            panelKontenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-        );
+        p_content.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel3.add(panelKonten);
-        panelKonten.setBounds(0, 60, 800, 540);
+        pMain.setBackground(new java.awt.Color(255, 255, 255));
+        pMain.setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout p_contentLayout = new javax.swing.GroupLayout(p_content);
+        p_content.setLayout(p_contentLayout);
+        p_contentLayout.setHorizontalGroup(
+            p_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        p_contentLayout.setVerticalGroup(
+            p_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        getContentPane().add(p_content, java.awt.BorderLayout.CENTER);
+
+        setSize(new java.awt.Dimension(814, 607));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bDataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDataMouseClicked
+    private void bRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRiwayatActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bDataMouseClicked
+    }//GEN-LAST:event_bRiwayatActionPerformed
 
-    private void bDataMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDataMouseEntered
-        menuPanel.setSize(160,70);
-    }//GEN-LAST:event_bDataMouseEntered
-
-    private void bDataMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDataMouseExited
-       menuPanel.setSize(0,0);
-    }//GEN-LAST:event_bDataMouseExited
-
-    private void menuPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuPanelMouseEntered
-          menuPanel.setSize(160,70);
-    }//GEN-LAST:event_menuPanelMouseEntered
-
-    private void menuPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuPanelMouseExited
-         menuPanel.setSize(0,0);
-    }//GEN-LAST:event_menuPanelMouseExited
-
-    private void bBerandaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBerandaMouseClicked
+    private void bKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKeluarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bBerandaMouseClicked
+    }//GEN-LAST:event_bKeluarActionPerformed
 
-    private void bBerandaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBerandaMouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bBerandaMouseEntered
+    private void bRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRuanganActionPerformed
+        pMain.removeAll();               // clear panel sebelumnya
+        pMain.add(new Ruangan(this));   // tambahkan panel baru
+        pMain.revalidate();             // refresh layout
+        pMain.repaint();                // gambar ulang
 
-    private void bBerandaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bBerandaMouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bBerandaMouseExited
+    }//GEN-LAST:event_bRuanganActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,17 +193,17 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bBeranda;
-    private javax.swing.JButton bData;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel lPeminjaman;
-    private javax.swing.JLabel lRuangan;
-    private javax.swing.JPanel menuPanel;
-    private javax.swing.JPanel panelKonten;
+    private javax.swing.JButton bKeluar;
+    private javax.swing.JButton bRiwayat;
+    private javax.swing.JButton bRuangan;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel menus;
+    private javax.swing.JPanel pMain;
+    private javax.swing.JPanel p_content;
+    private javax.swing.JPanel p_nav;
+    private javax.swing.JPanel p_side;
     // End of variables declaration//GEN-END:variables
 
-   
 }
