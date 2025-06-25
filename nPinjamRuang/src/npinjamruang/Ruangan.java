@@ -5,6 +5,9 @@
 package npinjamruang;
 
 import java.awt.Image;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 /**
@@ -176,21 +179,33 @@ public class Ruangan extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bPinjam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam1ActionPerformed
-        FormPinjam formPinjam = new FormPinjam();
-        formPinjam.setRuangId("R201"); // contoh data, bisa diganti sesuai tombol
-        parent.setMainPanel(formPinjam);
+        try {
+            FormPinjam formPinjam = new FormPinjam();
+            formPinjam.setRuangId("R201"); // contoh data, bisa diganti sesuai tombol
+            parent.setMainPanel(formPinjam);
+        } catch (ParseException ex) {
+            Logger.getLogger(Ruangan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_bPinjam1ActionPerformed
 
     private void bPinjam2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam2ActionPerformed
-        FormPinjam formPinjam = new FormPinjam();
-        formPinjam.setRuangId("R202"); // contoh data, bisa diganti sesuai tombol
-        parent.setMainPanel(formPinjam);
+        try {
+            FormPinjam formPinjam = new FormPinjam();
+            formPinjam.setRuangId("R202"); // contoh data, bisa diganti sesuai tombol
+            parent.setMainPanel(formPinjam);
+        } catch (ParseException ex) {
+            Logger.getLogger(Ruangan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_bPinjam2ActionPerformed
 
     private void bPinjam3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam3ActionPerformed
-        FormPinjam formPinjam = new FormPinjam();
-        formPinjam.setRuangId("R203"); // contoh data, bisa diganti sesuai tombol
-        parent.setMainPanel(formPinjam);
+        try {
+            FormPinjam formPinjam = new FormPinjam();
+            formPinjam.setRuangId("R203"); // contoh data, bisa diganti sesuai tombol
+            parent.setMainPanel(formPinjam);
+        } catch (ParseException ex) {
+            Logger.getLogger(Ruangan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_bPinjam3ActionPerformed
 
 

@@ -21,15 +21,18 @@ public class MainMenu extends javax.swing.JFrame {
     public MainMenu() {
         initComponents();
 
-        pDash.setOpaque(true);
-        pDash.putClientProperty(FlatClientProperties.STYLE, "arc: 15");
+        lIconD.setIcon(ImageHelper.getIcon("/img/home.png", 20, 20));
+        lIconD1.setIcon(ImageHelper.getIcon("/img/db.png", 20, 20));
 
-        pDash.putClientProperty("JComponent.arc", 15);
-        pDash.putClientProperty("JComponent.rounding", 15);
+        pPinjam.setOpaque(true);
+        pPinjam.putClientProperty(FlatClientProperties.STYLE, "arc: 15");
 
-        pDash.setPreferredSize(new Dimension(180, 40));
-        bDash.setPreferredSize(new Dimension(74, 20));
-        bDash.setOpaque(false);
+        pPinjam.putClientProperty("JComponent.arc", 15);
+        pPinjam.putClientProperty("JComponent.rounding", 15);
+
+        pPinjam.setPreferredSize(new Dimension(180, 40));
+        bPinjam.setPreferredSize(new Dimension(74, 20));
+        bPinjam.setOpaque(false);
     }
 
     /**
@@ -47,14 +50,14 @@ public class MainMenu extends javax.swing.JFrame {
         p_side = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         menus = new javax.swing.JPanel();
-        pDash = new javax.swing.JPanel();
+        pPinjam = new javax.swing.JPanel();
         pLine = new javax.swing.JPanel();
         lIconD = new javax.swing.JLabel();
-        bDash = new javax.swing.JLabel();
-        pDash1 = new javax.swing.JPanel();
+        bPinjam = new javax.swing.JLabel();
+        pHistory = new javax.swing.JPanel();
         pLine1 = new javax.swing.JPanel();
         lIconD1 = new javax.swing.JLabel();
-        bDash1 = new javax.swing.JLabel();
+        bHistory = new javax.swing.JLabel();
         p_content = new javax.swing.JPanel();
         pMain = new javax.swing.JPanel();
 
@@ -98,14 +101,14 @@ public class MainMenu extends javax.swing.JFrame {
 
         menus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pDash.setBackground(new java.awt.Color(174, 200, 164));
-        pDash.setPreferredSize(new java.awt.Dimension(150, 30));
-        pDash.addMouseListener(new java.awt.event.MouseAdapter() {
+        pPinjam.setBackground(new java.awt.Color(174, 200, 164));
+        pPinjam.setPreferredSize(new java.awt.Dimension(150, 30));
+        pPinjam.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pDashMouseClicked(evt);
+                pPinjamMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pDashMouseEntered(evt);
+                pPinjamMouseEntered(evt);
             }
         });
 
@@ -126,55 +129,55 @@ public class MainMenu extends javax.swing.JFrame {
         lIconD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
         lIconD.setPreferredSize(new java.awt.Dimension(20, 20));
 
-        bDash.setBackground(new java.awt.Color(174, 200, 164));
-        bDash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bDash.setText("Dashboard");
-        bDash.addMouseListener(new java.awt.event.MouseAdapter() {
+        bPinjam.setBackground(new java.awt.Color(174, 200, 164));
+        bPinjam.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bPinjam.setText("Pinjam Ruang");
+        bPinjam.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bDashMouseClicked(evt);
+                bPinjamMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bDashMouseEntered(evt);
+                bPinjamMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                bDashMouseExited(evt);
+                bPinjamMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pDashLayout = new javax.swing.GroupLayout(pDash);
-        pDash.setLayout(pDashLayout);
-        pDashLayout.setHorizontalGroup(
-            pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDashLayout.createSequentialGroup()
+        javax.swing.GroupLayout pPinjamLayout = new javax.swing.GroupLayout(pPinjam);
+        pPinjam.setLayout(pPinjamLayout);
+        pPinjamLayout.setHorizontalGroup(
+            pPinjamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPinjamLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addComponent(pLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(lIconD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bDash, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
-        pDashLayout.setVerticalGroup(
-            pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDashLayout.createSequentialGroup()
+        pPinjamLayout.setVerticalGroup(
+            pPinjamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pPinjamLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addGroup(pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(bDash, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pPinjamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(bPinjam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lIconD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        menus.add(pDash, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, -1));
+        menus.add(pPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, -1));
 
-        pDash1.setBackground(new java.awt.Color(174, 200, 164));
-        pDash1.setPreferredSize(new java.awt.Dimension(150, 30));
-        pDash1.addMouseListener(new java.awt.event.MouseAdapter() {
+        pHistory.setBackground(new java.awt.Color(174, 200, 164));
+        pHistory.setPreferredSize(new java.awt.Dimension(150, 30));
+        pHistory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                pDash1MouseClicked(evt);
+                pHistoryMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pDash1MouseEntered(evt);
+                pHistoryMouseEntered(evt);
             }
         });
 
@@ -192,49 +195,49 @@ public class MainMenu extends javax.swing.JFrame {
             .addGap(0, 28, Short.MAX_VALUE)
         );
 
-        lIconD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        lIconD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/db.png"))); // NOI18N
         lIconD1.setPreferredSize(new java.awt.Dimension(20, 20));
 
-        bDash1.setBackground(new java.awt.Color(174, 200, 164));
-        bDash1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        bDash1.setText("History");
-        bDash1.addMouseListener(new java.awt.event.MouseAdapter() {
+        bHistory.setBackground(new java.awt.Color(174, 200, 164));
+        bHistory.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bHistory.setText("History");
+        bHistory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bDash1MouseClicked(evt);
+                bHistoryMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                bDash1MouseEntered(evt);
+                bHistoryMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                bDash1MouseExited(evt);
+                bHistoryMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout pDash1Layout = new javax.swing.GroupLayout(pDash1);
-        pDash1.setLayout(pDash1Layout);
-        pDash1Layout.setHorizontalGroup(
-            pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDash1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pHistoryLayout = new javax.swing.GroupLayout(pHistory);
+        pHistory.setLayout(pHistoryLayout);
+        pHistoryLayout.setHorizontalGroup(
+            pHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pHistoryLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addComponent(pLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(lIconD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bDash1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
-        pDash1Layout.setVerticalGroup(
-            pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pDash1Layout.createSequentialGroup()
+        pHistoryLayout.setVerticalGroup(
+            pHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pHistoryLayout.createSequentialGroup()
                 .addGap(3, 3, 3)
-                .addGroup(pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(bDash1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(bHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lIconD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        menus.add(pDash1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 170, -1));
+        menus.add(pHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 170, -1));
 
         jScrollPane1.setViewportView(menus);
 
@@ -275,56 +278,65 @@ public class MainMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bDashMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseClicked
+    private void bPinjamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bPinjamMouseClicked
 
-        pDash.setBackground(new Color(231, 239, 199));
+        pPinjam.setBackground(new Color(231, 239, 199));
         pLine.setBackground(new Color(138, 120, 78));
 
         pMain.removeAll();
         pMain.add(new Ruangan(this));
         pMain.repaint();
         pMain.revalidate();
-    }//GEN-LAST:event_bDashMouseClicked
+    }//GEN-LAST:event_bPinjamMouseClicked
 
-    private void bDashMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseEntered
+    private void bPinjamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bPinjamMouseEntered
         // TODO add your handling code here:
-        pDash.setBackground(new Color(231, 239, 199));
+        pPinjam.setBackground(new Color(231, 239, 199));
         pLine.setBackground(new Color(138, 120, 78));
-    }//GEN-LAST:event_bDashMouseEntered
+    }//GEN-LAST:event_bPinjamMouseEntered
 
-    private void bDashMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseExited
+    private void bPinjamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bPinjamMouseExited
         // TODO add your handling code here:
-        pDash.setBackground(new Color(174, 200, 164));
+        pPinjam.setBackground(new Color(174, 200, 164));
         pLine.setBackground(new Color(174, 200, 164));
-    }//GEN-LAST:event_bDashMouseExited
+    }//GEN-LAST:event_bPinjamMouseExited
 
-    private void pDashMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDashMouseClicked
+    private void pPinjamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPinjamMouseClicked
 
-    }//GEN-LAST:event_pDashMouseClicked
+    }//GEN-LAST:event_pPinjamMouseClicked
 
-    private void pDashMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDashMouseEntered
+    private void pPinjamMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPinjamMouseEntered
+
+    }//GEN-LAST:event_pPinjamMouseEntered
+
+    private void bHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoryMouseClicked
+        pHistory.setBackground(new Color(231, 239, 199));
+        pLine1.setBackground(new Color(138, 120, 78));
+
+        pMain.removeAll();
+        pMain.add(new History(this));
+        pMain.repaint();
+        pMain.revalidate();
+
+    }//GEN-LAST:event_bHistoryMouseClicked
+
+    private void bHistoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoryMouseEntered
+        pHistory.setBackground(new Color(231, 239, 199));
+        pLine1.setBackground(new Color(138, 120, 78));
+    }//GEN-LAST:event_bHistoryMouseEntered
+
+    private void bHistoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoryMouseExited
+        pHistory.setBackground(new Color(174, 200, 164));
+        pLine1.setBackground(new Color(174, 200, 164));
+    }//GEN-LAST:event_bHistoryMouseExited
+
+    private void pHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pHistoryMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_pDashMouseEntered
+    }//GEN-LAST:event_pHistoryMouseClicked
 
-    private void bDash1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bDash1MouseClicked
+    private void pHistoryMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pHistoryMouseEntered
 
-    private void bDash1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bDash1MouseEntered
-
-    private void bDash1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bDash1MouseExited
-
-    private void pDash1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDash1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pDash1MouseClicked
-
-    private void pDash1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDash1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pDash1MouseEntered
+    }//GEN-LAST:event_pHistoryMouseEntered
 
     /**
      * @param args the command line arguments
@@ -362,19 +374,19 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bDash;
-    private javax.swing.JLabel bDash1;
+    private javax.swing.JLabel bHistory;
+    private javax.swing.JLabel bPinjam;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lIconD;
     private javax.swing.JLabel lIconD1;
     private javax.swing.JPanel menus;
-    public javax.swing.JPanel pDash;
-    public javax.swing.JPanel pDash1;
+    public javax.swing.JPanel pHistory;
     private javax.swing.JPanel pLine;
     private javax.swing.JPanel pLine1;
     private javax.swing.JPanel pMain;
+    public javax.swing.JPanel pPinjam;
     private javax.swing.JPanel p_content;
     private javax.swing.JPanel p_nav;
     private javax.swing.JPanel p_side;
