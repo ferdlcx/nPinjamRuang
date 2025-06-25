@@ -23,6 +23,8 @@ public class Ruangan extends javax.swing.JPanel {
         Image img = icon.getImage().getScaledInstance(140, 120, Image.SCALE_SMOOTH);
         lbGambar.setIcon(new ImageIcon(img));
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,6 +63,11 @@ public class Ruangan extends javax.swing.JPanel {
 
         bPinjam1.setText("Pinjam");
         bPinjam1.setPreferredSize(new java.awt.Dimension(75, 30));
+        bPinjam1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPinjam1ActionPerformed(evt);
+            }
+        });
         card.add(bPinjam1, java.awt.BorderLayout.PAGE_END);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -95,6 +102,11 @@ public class Ruangan extends javax.swing.JPanel {
 
         bPinjam2.setText("Pinjam");
         bPinjam2.setPreferredSize(new java.awt.Dimension(75, 30));
+        bPinjam2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPinjam2ActionPerformed(evt);
+            }
+        });
         card1.add(bPinjam2, java.awt.BorderLayout.PAGE_END);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -129,6 +141,11 @@ public class Ruangan extends javax.swing.JPanel {
 
         bPinjam3.setText("Pinjam");
         bPinjam3.setPreferredSize(new java.awt.Dimension(75, 30));
+        bPinjam3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPinjam3ActionPerformed(evt);
+            }
+        });
         card2.add(bPinjam3, java.awt.BorderLayout.PAGE_END);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -157,6 +174,24 @@ public class Ruangan extends javax.swing.JPanel {
 
         add(card2);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bPinjam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam1ActionPerformed
+        FormPinjam formPinjam = new FormPinjam();
+        formPinjam.setRuangId("R201"); // contoh data, bisa diganti sesuai tombol
+        parent.setMainPanel(formPinjam);
+    }//GEN-LAST:event_bPinjam1ActionPerformed
+
+    private void bPinjam2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam2ActionPerformed
+        FormPinjam formPinjam = new FormPinjam();
+        formPinjam.setRuangId("R202"); // contoh data, bisa diganti sesuai tombol
+        parent.setMainPanel(formPinjam);
+    }//GEN-LAST:event_bPinjam2ActionPerformed
+
+    private void bPinjam3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjam3ActionPerformed
+        FormPinjam formPinjam = new FormPinjam();
+        formPinjam.setRuangId("R203"); // contoh data, bisa diganti sesuai tombol
+        parent.setMainPanel(formPinjam);
+    }//GEN-LAST:event_bPinjam3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

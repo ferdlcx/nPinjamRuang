@@ -5,15 +5,33 @@
 package npinjamruang;
 
 import java.awt.Image;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import javax.swing.ImageIcon;
-
+import javax.swing.JOptionPane;
+import javax.swing.text.MaskFormatter;
 
 public class FormPinjam extends javax.swing.JPanel {
 
-    public FormPinjam() {
+    public FormPinjam() throws ParseException {
         initComponents();
 
+        // Format tanggal
+    MaskFormatter dateFormatter = new MaskFormatter("####-##-##");
+    dateFormatter.setPlaceholderCharacter('_');
+    dateFormatter.install(fDate);
+
+    // Format jam mulai
+    MaskFormatter timeFormatterStart = new MaskFormatter("##:##");
+    timeFormatterStart.setPlaceholderCharacter('_');
+    timeFormatterStart.install(fStart);
+
+    // Format jam selesai
+    MaskFormatter timeFormatterEnd = new MaskFormatter("##:##");
+    timeFormatterEnd.setPlaceholderCharacter('_');
+    timeFormatterEnd.install(fEnd);
     }
+    
     private String ruangId;
 
     public void setRuangId(String ruangId) {
@@ -69,6 +87,8 @@ public class FormPinjam extends javax.swing.JPanel {
 
         jLabel8.setText("Tujuan");
 
+        fDate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("yyyy-mm-dd"))));
+
         aTujuan.setColumns(20);
         aTujuan.setRows(5);
         jScrollPane1.setViewportView(aTujuan);
@@ -76,6 +96,11 @@ public class FormPinjam extends javax.swing.JPanel {
         bReset.setText("Reset");
 
         bPinjam.setText("Pinjam");
+        bPinjam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bPinjamActionPerformed(evt);
+            }
+        });
 
         tRuang.setEditable(false);
 
@@ -170,6 +195,16 @@ public class FormPinjam extends javax.swing.JPanel {
                 .addContainerGap(70, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bPinjamActionPerformed
+        String nama = tUser.getText().trim();
+        String tanggal = fDate.getText().trim();
+        String jamMulai = fStart.getText().trim();
+        String jamSelesai = fEnd.getText().trim();
+        String tujuan = aTujuan.getText().trim();
+
+         new PinjamModel().insertData(nama, tanggal, jamMulai, jamSelesai, tujuan);
+    }//GEN-LAST:event_bPinjamActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
