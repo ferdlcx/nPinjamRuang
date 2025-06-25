@@ -4,6 +4,8 @@
  */
 package npinjamruang;
 
+import java.awt.Color;
+
 /**
  *
  * @author dyana
@@ -32,9 +34,10 @@ public class MainMenu extends javax.swing.JFrame {
         p_side = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         menus = new javax.swing.JPanel();
-        bKeluar = new javax.swing.JButton();
-        bRuangan = new javax.swing.JButton();
-        bRiwayat = new javax.swing.JButton();
+        pDash = new javax.swing.JPanel();
+        pLine = new javax.swing.JPanel();
+        lIconD = new javax.swing.JLabel();
+        bDash = new javax.swing.JLabel();
         p_content = new javax.swing.JPanel();
         pMain = new javax.swing.JPanel();
 
@@ -78,29 +81,74 @@ public class MainMenu extends javax.swing.JFrame {
 
         menus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bKeluar.setText("Keluar");
-        bKeluar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bKeluarActionPerformed(evt);
+        pDash.setBackground(new java.awt.Color(174, 200, 164));
+        pDash.setPreferredSize(new java.awt.Dimension(150, 30));
+        pDash.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pDashMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pDashMouseEntered(evt);
             }
         });
-        menus.add(bKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 150, 40));
 
-        bRuangan.setText("List Ruangan");
-        bRuangan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bRuanganActionPerformed(evt);
-            }
-        });
-        menus.add(bRuangan, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 150, 40));
+        pLine.setBackground(new java.awt.Color(174, 200, 164));
+        pLine.setPreferredSize(new java.awt.Dimension(5, 28));
 
-        bRiwayat.setText("Riwayat");
-        bRiwayat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bRiwayatActionPerformed(evt);
+        javax.swing.GroupLayout pLineLayout = new javax.swing.GroupLayout(pLine);
+        pLine.setLayout(pLineLayout);
+        pLineLayout.setHorizontalGroup(
+            pLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+        pLineLayout.setVerticalGroup(
+            pLineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        lIconD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        lIconD.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        bDash.setBackground(new java.awt.Color(174, 200, 164));
+        bDash.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bDash.setText("Dashboard");
+        bDash.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bDashMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bDashMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bDashMouseExited(evt);
             }
         });
-        menus.add(bRiwayat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 150, 40));
+
+        javax.swing.GroupLayout pDashLayout = new javax.swing.GroupLayout(pDash);
+        pDash.setLayout(pDashLayout);
+        pDashLayout.setHorizontalGroup(
+            pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDashLayout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(pLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(lIconD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bDash, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+        pDashLayout.setVerticalGroup(
+            pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDashLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(pDashLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(bDash, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lIconD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        menus.add(pDash, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, -1));
 
         jScrollPane1.setViewportView(menus);
 
@@ -141,21 +189,36 @@ public class MainMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bRiwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRiwayatActionPerformed
+    private void bDashMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseClicked
+
+        pDash.setBackground(new Color(231, 239, 199));
+        pLine.setBackground(new Color(138, 120, 78));
+
+        pMain.removeAll();
+        pMain.add(new Ruangan(this));
+        pMain.repaint();
+        pMain.revalidate();
+    }//GEN-LAST:event_bDashMouseClicked
+
+    private void bDashMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseEntered
         // TODO add your handling code here:
-    }//GEN-LAST:event_bRiwayatActionPerformed
+        pDash.setBackground(new Color(231, 239, 199));
+        pLine.setBackground(new Color(138, 120, 78));
+    }//GEN-LAST:event_bDashMouseEntered
 
-    private void bKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bKeluarActionPerformed
+    private void bDashMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDashMouseExited
         // TODO add your handling code here:
-    }//GEN-LAST:event_bKeluarActionPerformed
+        pDash.setBackground(new Color(174, 200, 164));
+        pLine.setBackground(new Color(174, 200, 164));
+    }//GEN-LAST:event_bDashMouseExited
 
-    private void bRuanganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRuanganActionPerformed
-        pMain.removeAll();               // clear panel sebelumnya
-        pMain.add(new Ruangan(this));   // tambahkan panel baru
-        pMain.revalidate();             // refresh layout
-        pMain.repaint();                // gambar ulang
+    private void pDashMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDashMouseClicked
 
-    }//GEN-LAST:event_bRuanganActionPerformed
+    }//GEN-LAST:event_pDashMouseClicked
+
+    private void pDashMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDashMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pDashMouseEntered
 
     /**
      * @param args the command line arguments
@@ -193,13 +256,14 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bKeluar;
-    private javax.swing.JButton bRiwayat;
-    private javax.swing.JButton bRuangan;
+    private javax.swing.JLabel bDash;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lIconD;
     private javax.swing.JPanel menus;
+    public javax.swing.JPanel pDash;
+    private javax.swing.JPanel pLine;
     private javax.swing.JPanel pMain;
     private javax.swing.JPanel p_content;
     private javax.swing.JPanel p_nav;

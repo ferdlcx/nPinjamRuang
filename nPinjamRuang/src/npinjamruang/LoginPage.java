@@ -3,14 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package npinjamruang;
-
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.formdev.flatlaf.FlatLightLaf;
-import javax.swing.*;
-import java.awt.*;
-
 /**
  *
  * @author dyana
@@ -22,39 +17,6 @@ public class LoginPage extends javax.swing.JFrame {
      */
     public LoginPage() {
         initComponents();
-
-        // Setup frame
-        setTitle("Login");
-        setSize(350, 230);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        tUser.putClientProperty("JTextField.placeholderText", "Masukkan username");
-        pPass.putClientProperty("JTextField.placeholderText", "Masukkan password");
-
-        // Styling global (bisa di Main juga)
-        UIManager.put("Button.arc", 20);
-        UIManager.put("Component.arc", 15);
-        UIManager.put("TextComponent.arc", 15);
-        UIManager.put("Button.font", new Font("Segoe UI", Font.PLAIN, 14));
-        UIManager.put("Label.font", new Font("Segoe UI", Font.PLAIN, 13));
-        UIManager.put("TextField.font", new Font("Segoe UI", Font.PLAIN, 13));
-
-// Font dan warna dasar
-        bLogin.setBackground(new Color(138, 120, 78));
-        bLogin.setForeground(new Color(231, 239, 199));
-        bLogin.setFont(new Font("Segoe UI", Font.BOLD, 14));
-
-// Property khusus FlatLaf
-        bLogin.putClientProperty("JButton.buttonType", "roundRect"); // atau "default"
-        bLogin.putClientProperty("JButton.focusedBackground", new Color(132, 174, 146));
-        bLogin.putClientProperty("JButton.hoverBackground", new Color(112, 154, 126));
-        bLogin.putClientProperty("JButton.pressedBackground", new Color(92, 134, 106));
-
-        ImageIcon icon = new ImageIcon(getClass().getResource("/img/logo.png"));
-        Image img = icon.getImage().getScaledInstance(140, 140, Image.SCALE_SMOOTH);
-        lbgambar.setIcon(new ImageIcon(img));
-
     }
 
     /**
@@ -69,15 +31,14 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        lblPassword = new javax.swing.JLabel();
-        lblUsername = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         tUser = new javax.swing.JTextField();
         pPass = new javax.swing.JPasswordField();
-        bLogin = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        lbgambar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,23 +53,23 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel4.setText("RuangSYS");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
 
-        lblPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblPassword.setText("Password");
-        jPanel1.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setText("Password");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
-        lblUsername.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUsername.setText("Username");
-        jPanel1.add(lblUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setText("Username");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
         jPanel1.add(tUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 330, 40));
         jPanel1.add(pPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 330, 40));
 
-        bLogin.setText("Masuk");
-        bLogin.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Masuk");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bLoginActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 330, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 330, 40));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
 
@@ -128,14 +89,12 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbgambar, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,55 +103,74 @@ public class LoginPage extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(60, 60, 60)
-                .addComponent(lbgambar, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        setSize(new java.awt.Dimension(814, 607));
-        setLocationRelativeTo(null);
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
-        UserModel userModel = new UserModel();
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+           UserModel userModel = new UserModel();
         try {
             userModel.login(tUser.getText(), pPass.getText(), this);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE,
+            Logger.getLogger
+        (LoginPage.class.getName()).log(Level.SEVERE,
                     null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(LoginPage.class.getName()).
                     log(Level.SEVERE, null, ex);
 
         }
-    }//GEN-LAST:event_bLoginActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
         try {
-            UIManager.setLookAndFeel(new FlatLightLaf());
-        } catch (Exception e) {
-            e.printStackTrace();
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
 
-        SwingUtilities.invokeLater(() -> new LoginPage().setVisible(true));
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new LoginPage().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bLogin;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lbgambar;
-    private javax.swing.JLabel lblPassword;
-    private javax.swing.JLabel lblUsername;
     private javax.swing.JPasswordField pPass;
     private javax.swing.JTextField tUser;
     // End of variables declaration//GEN-END:variables

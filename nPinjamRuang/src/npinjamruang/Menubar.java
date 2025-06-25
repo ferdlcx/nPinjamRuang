@@ -9,6 +9,6 @@ package npinjamruang;
  * @author dyana
  */
 public class Menubar {
-    MainMenu = new MainMenu();
-    MainMenu.setVisible(true);
+//    MainMenu = new MainMenu();
+//    MainMenu.setVisible(true);
 }
