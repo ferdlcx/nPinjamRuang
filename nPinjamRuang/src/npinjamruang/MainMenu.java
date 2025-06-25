@@ -8,6 +8,8 @@ import com.formdev.flatlaf.FlatClientProperties;
 import java.awt.Color;
 import java.awt.Dimension;
 import javax.swing.JPanel;
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.ui.FlatPanelUI;
 
 /**
  *
@@ -24,15 +26,6 @@ public class MainMenu extends javax.swing.JFrame {
         lIconD.setIcon(ImageHelper.getIcon("/img/home.png", 20, 20));
         lIconD1.setIcon(ImageHelper.getIcon("/img/db.png", 20, 20));
 
-        pPinjam.setOpaque(true);
-        pPinjam.putClientProperty(FlatClientProperties.STYLE, "arc: 15");
-
-        pPinjam.putClientProperty("JComponent.arc", 15);
-        pPinjam.putClientProperty("JComponent.rounding", 15);
-
-        pPinjam.setPreferredSize(new Dimension(180, 40));
-        bPinjam.setPreferredSize(new Dimension(74, 20));
-        bPinjam.setOpaque(false);
     }
 
     /**
@@ -62,8 +55,9 @@ public class MainMenu extends javax.swing.JFrame {
         pMain = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PinjamRuangSYS");
 
-        p_nav.setBackground(new java.awt.Color(0, 102, 204));
+        p_nav.setBackground(new java.awt.Color(0, 153, 204));
         p_nav.setPreferredSize(new java.awt.Dimension(800, 75));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
@@ -99,9 +93,10 @@ public class MainMenu extends javax.swing.JFrame {
 
         p_side.setPreferredSize(new java.awt.Dimension(200, 525));
 
+        menus.setBackground(new java.awt.Color(255, 255, 255));
         menus.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pPinjam.setBackground(new java.awt.Color(174, 200, 164));
+        pPinjam.setBackground(new java.awt.Color(255, 255, 255));
         pPinjam.setPreferredSize(new java.awt.Dimension(150, 30));
         pPinjam.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -112,7 +107,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        pLine.setBackground(new java.awt.Color(174, 200, 164));
+        pLine.setBackground(new java.awt.Color(255, 255, 255));
         pLine.setPreferredSize(new java.awt.Dimension(5, 28));
 
         javax.swing.GroupLayout pLineLayout = new javax.swing.GroupLayout(pLine);
@@ -153,9 +148,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(pLine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(lIconD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bPinjam, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         pPinjamLayout.setVerticalGroup(
             pPinjamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,7 +165,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         menus.add(pPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, -1));
 
-        pHistory.setBackground(new java.awt.Color(174, 200, 164));
+        pHistory.setBackground(new java.awt.Color(255, 255, 255));
         pHistory.setPreferredSize(new java.awt.Dimension(150, 30));
         pHistory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -181,7 +176,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
 
-        pLine1.setBackground(new java.awt.Color(174, 200, 164));
+        pLine1.setBackground(new java.awt.Color(255, 255, 255));
         pLine1.setPreferredSize(new java.awt.Dimension(5, 28));
 
         javax.swing.GroupLayout pLine1Layout = new javax.swing.GroupLayout(pLine1);
@@ -222,9 +217,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addComponent(pLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(5, 5, 5)
                 .addComponent(lIconD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bHistory, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
         pHistoryLayout.setVerticalGroup(
             pHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,7 +276,7 @@ public class MainMenu extends javax.swing.JFrame {
     private void bPinjamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bPinjamMouseClicked
 
         pPinjam.setBackground(new Color(231, 239, 199));
-        pLine.setBackground(new Color(138, 120, 78));
+        pLine.setBackground(new Color(0, 153, 204));
 
         pMain.removeAll();
         pMain.add(new Ruangan(this));
@@ -297,8 +292,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void bPinjamMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bPinjamMouseExited
         // TODO add your handling code here:
-        pPinjam.setBackground(new Color(174, 200, 164));
-        pLine.setBackground(new Color(174, 200, 164));
+        pPinjam.setBackground(new Color(255, 255, 255));
+        pLine.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_bPinjamMouseExited
 
     private void pPinjamMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pPinjamMouseClicked
@@ -311,7 +306,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void bHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoryMouseClicked
         pHistory.setBackground(new Color(231, 239, 199));
-        pLine1.setBackground(new Color(138, 120, 78));
+        pLine1.setBackground(new Color(0, 153, 204));
 
         pMain.removeAll();
         pMain.add(new History(this));
@@ -326,8 +321,8 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_bHistoryMouseEntered
 
     private void bHistoryMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bHistoryMouseExited
-        pHistory.setBackground(new Color(174, 200, 164));
-        pLine1.setBackground(new Color(174, 200, 164));
+        pHistory.setBackground(new Color(255, 255, 255));
+        pLine1.setBackground(new Color(255, 255, 255));
     }//GEN-LAST:event_bHistoryMouseExited
 
     private void pHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pHistoryMouseClicked

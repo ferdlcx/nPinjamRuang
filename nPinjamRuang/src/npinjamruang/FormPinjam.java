@@ -18,17 +18,17 @@ public class FormPinjam extends javax.swing.JPanel {
 
         // Format tanggal
         MaskFormatter dateFormatter = new MaskFormatter("####-##-##");
-        dateFormatter.setPlaceholderCharacter('_');
+        dateFormatter.setPlaceholderCharacter(' ');
         dateFormatter.install(fDate);
 
         // Format jam mulai
         MaskFormatter timeFormatterStart = new MaskFormatter("##:##");
-        timeFormatterStart.setPlaceholderCharacter('_');
+        timeFormatterStart.setPlaceholderCharacter(' ');
         timeFormatterStart.install(fStart);
 
         // Format jam selesai
         MaskFormatter timeFormatterEnd = new MaskFormatter("##:##");
-        timeFormatterEnd.setPlaceholderCharacter('_');
+        timeFormatterEnd.setPlaceholderCharacter(' ');
         timeFormatterEnd.install(fEnd);
     }
 

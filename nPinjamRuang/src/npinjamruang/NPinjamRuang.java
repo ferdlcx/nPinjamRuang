@@ -4,6 +4,8 @@
  */
 package npinjamruang;
 import java.sql.SQLException;
+import com.formdev.flatlaf.FlatLightLaf;
+
 
 /**
  *
@@ -16,6 +18,12 @@ public class NPinjamRuang {
      */
     public static void main(String[] args) throws ClassNotFoundException, 
             SQLException {
+         try {
+        // Aktifkan FlatLaf
+        FlatLightLaf.setup();
+    } catch (Exception ex) {
+        System.err.println("Gagal memuat FlatLaf");
+    }
                 // TODO code application logic here
         new Koneksi().connect();
         new LoginPage().setVisible(true);
