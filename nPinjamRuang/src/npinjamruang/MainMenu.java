@@ -4,7 +4,10 @@
  */
 package npinjamruang;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import java.awt.Color;
+import java.awt.Dimension;
+import javax.swing.JPanel;
 
 /**
  *
@@ -17,6 +20,16 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
+
+        pDash.setOpaque(true);
+        pDash.putClientProperty(FlatClientProperties.STYLE, "arc: 15");
+
+        pDash.putClientProperty("JComponent.arc", 15);
+        pDash.putClientProperty("JComponent.rounding", 15);
+
+        pDash.setPreferredSize(new Dimension(180, 40));
+        bDash.setPreferredSize(new Dimension(74, 20));
+        bDash.setOpaque(false);
     }
 
     /**
@@ -38,6 +51,10 @@ public class MainMenu extends javax.swing.JFrame {
         pLine = new javax.swing.JPanel();
         lIconD = new javax.swing.JLabel();
         bDash = new javax.swing.JLabel();
+        pDash1 = new javax.swing.JPanel();
+        pLine1 = new javax.swing.JPanel();
+        lIconD1 = new javax.swing.JLabel();
+        bDash1 = new javax.swing.JLabel();
         p_content = new javax.swing.JPanel();
         pMain = new javax.swing.JPanel();
 
@@ -150,6 +167,75 @@ public class MainMenu extends javax.swing.JFrame {
 
         menus.add(pDash, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 170, -1));
 
+        pDash1.setBackground(new java.awt.Color(174, 200, 164));
+        pDash1.setPreferredSize(new java.awt.Dimension(150, 30));
+        pDash1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pDash1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pDash1MouseEntered(evt);
+            }
+        });
+
+        pLine1.setBackground(new java.awt.Color(174, 200, 164));
+        pLine1.setPreferredSize(new java.awt.Dimension(5, 28));
+
+        javax.swing.GroupLayout pLine1Layout = new javax.swing.GroupLayout(pLine1);
+        pLine1.setLayout(pLine1Layout);
+        pLine1Layout.setHorizontalGroup(
+            pLine1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+        pLine1Layout.setVerticalGroup(
+            pLine1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 28, Short.MAX_VALUE)
+        );
+
+        lIconD1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/home.png"))); // NOI18N
+        lIconD1.setPreferredSize(new java.awt.Dimension(20, 20));
+
+        bDash1.setBackground(new java.awt.Color(174, 200, 164));
+        bDash1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bDash1.setText("History");
+        bDash1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bDash1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bDash1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bDash1MouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pDash1Layout = new javax.swing.GroupLayout(pDash1);
+        pDash1.setLayout(pDash1Layout);
+        pDash1Layout.setHorizontalGroup(
+            pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDash1Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(pLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(lIconD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bDash1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+        pDash1Layout.setVerticalGroup(
+            pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pDash1Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(pDash1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(bDash1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lIconD1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pLine1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        menus.add(pDash1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 170, -1));
+
         jScrollPane1.setViewportView(menus);
 
         javax.swing.GroupLayout p_sideLayout = new javax.swing.GroupLayout(p_side);
@@ -220,6 +306,26 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pDashMouseEntered
 
+    private void bDash1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bDash1MouseClicked
+
+    private void bDash1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bDash1MouseEntered
+
+    private void bDash1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bDash1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bDash1MouseExited
+
+    private void pDash1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDash1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pDash1MouseClicked
+
+    private void pDash1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pDash1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pDash1MouseEntered
+
     /**
      * @param args the command line arguments
      */
@@ -257,17 +363,28 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bDash;
+    private javax.swing.JLabel bDash1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lIconD;
+    private javax.swing.JLabel lIconD1;
     private javax.swing.JPanel menus;
     public javax.swing.JPanel pDash;
+    public javax.swing.JPanel pDash1;
     private javax.swing.JPanel pLine;
+    private javax.swing.JPanel pLine1;
     private javax.swing.JPanel pMain;
     private javax.swing.JPanel p_content;
     private javax.swing.JPanel p_nav;
     private javax.swing.JPanel p_side;
     // End of variables declaration//GEN-END:variables
+
+    public void setMainPanel(JPanel panel) {
+        pMain.removeAll();
+        pMain.add(panel);
+        pMain.repaint();
+        pMain.revalidate();
+    }
 
 }

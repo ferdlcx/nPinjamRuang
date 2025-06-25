@@ -16,7 +16,8 @@ public class NPinjamRuang {
      */
     public static void main(String[] args) throws ClassNotFoundException, 
             SQLException {
-        // TODO code application logic here
+                // TODO code application logic here
         new Koneksi().connect();
+        new LoginPage().setVisible(true);
     }
 }

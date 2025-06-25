@@ -13,13 +13,12 @@ import javax.swing.ImageIcon;
  */
 public class Ruangan extends javax.swing.JPanel {
 
-   // Di dalam Ruangan.java
-private final MainMenu mainMenu;
+    private MainMenu parent;
 
-public Ruangan(MainMenu mainMenu) {
-    this.mainMenu = mainMenu;
-    initComponents(); 
-        
+    public Ruangan(MainMenu parent) {
+        this.parent = parent;
+        initComponents();
+
         ImageIcon icon = new ImageIcon(getClass().getResource("/img/kelas2.jpg"));
         Image img = icon.getImage().getScaledInstance(140, 120, Image.SCALE_SMOOTH);
         lbGambar.setIcon(new ImageIcon(img));
@@ -36,23 +35,33 @@ public Ruangan(MainMenu mainMenu) {
 
         jButton1 = new javax.swing.JButton();
         card = new javax.swing.JPanel();
-        bPinjam = new javax.swing.JButton();
+        bPinjam1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lbGambar = new javax.swing.JLabel();
+        card1 = new javax.swing.JPanel();
+        bPinjam2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        lbGambar1 = new javax.swing.JLabel();
+        card2 = new javax.swing.JPanel();
+        bPinjam3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        lbGambar2 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
         setPreferredSize(new java.awt.Dimension(600, 525));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 50, 5));
 
         card.setBackground(new java.awt.Color(204, 204, 204));
         card.setPreferredSize(new java.awt.Dimension(140, 170));
         card.setLayout(new java.awt.BorderLayout());
 
-        bPinjam.setText("Pinjam");
-        bPinjam.setPreferredSize(new java.awt.Dimension(75, 30));
-        card.add(bPinjam, java.awt.BorderLayout.PAGE_END);
+        bPinjam1.setText("Pinjam");
+        bPinjam1.setPreferredSize(new java.awt.Dimension(75, 30));
+        card.add(bPinjam1, java.awt.BorderLayout.PAGE_END);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(140, 20));
@@ -78,16 +87,94 @@ public Ruangan(MainMenu mainMenu) {
         card.add(jPanel2, java.awt.BorderLayout.PAGE_START);
         card.add(lbGambar, java.awt.BorderLayout.CENTER);
 
-        add(card, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 140, 160));
+        add(card);
+
+        card1.setBackground(new java.awt.Color(204, 204, 204));
+        card1.setPreferredSize(new java.awt.Dimension(140, 170));
+        card1.setLayout(new java.awt.BorderLayout());
+
+        bPinjam2.setText("Pinjam");
+        bPinjam2.setPreferredSize(new java.awt.Dimension(75, 30));
+        card1.add(bPinjam2, java.awt.BorderLayout.PAGE_END);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setPreferredSize(new java.awt.Dimension(140, 20));
+
+        jLabel3.setText("R201");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(108, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 4, Short.MAX_VALUE)
+                .addComponent(jLabel3))
+        );
+
+        card1.add(jPanel3, java.awt.BorderLayout.PAGE_START);
+        card1.add(lbGambar1, java.awt.BorderLayout.CENTER);
+
+        add(card1);
+
+        card2.setBackground(new java.awt.Color(204, 204, 204));
+        card2.setPreferredSize(new java.awt.Dimension(140, 170));
+        card2.setLayout(new java.awt.BorderLayout());
+
+        bPinjam3.setText("Pinjam");
+        bPinjam3.setPreferredSize(new java.awt.Dimension(75, 30));
+        card2.add(bPinjam3, java.awt.BorderLayout.PAGE_END);
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setPreferredSize(new java.awt.Dimension(140, 20));
+
+        jLabel4.setText("R201");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addContainerGap(108, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 4, Short.MAX_VALUE)
+                .addComponent(jLabel4))
+        );
+
+        card2.add(jPanel4, java.awt.BorderLayout.PAGE_START);
+        card2.add(lbGambar2, java.awt.BorderLayout.CENTER);
+
+        add(card2);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bPinjam;
+    private javax.swing.JButton bPinjam1;
+    private javax.swing.JButton bPinjam2;
+    private javax.swing.JButton bPinjam3;
     private javax.swing.JPanel card;
+    private javax.swing.JPanel card1;
+    private javax.swing.JPanel card2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lbGambar;
+    private javax.swing.JLabel lbGambar1;
+    private javax.swing.JLabel lbGambar2;
     // End of variables declaration//GEN-END:variables
 }

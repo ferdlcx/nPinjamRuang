@@ -3,9 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package npinjamruang;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import npinjamruang.ImageHelper;
+
+
 /**
  *
  * @author dyana
@@ -17,6 +24,27 @@ public class LoginPage extends javax.swing.JFrame {
      */
     public LoginPage() {
         initComponents();
+
+        lbImg.setIcon(ImageHelper.getIcon("/img/logo.png", 55, 55));
+
+        tUser.putClientProperty("JTextField.placeholderText", "Masukkan username");
+        pPass.putClientProperty("JTextField.placeholderText", "Masukkan password");
+
+        bLogin.setBackground(new Color(231, 239, 199));
+        bLogin.setForeground(new Color(59, 59, 26));
+        bLogin.setFont(new Font("Segoe UI", Font.BOLD, 14));
+
+        Color originalColor = bLogin.getBackground();
+        Color hoverColor = new Color(112, 154, 126);
+
+        bLogin.setBackground(new Color(138, 120, 78));
+        bLogin.setForeground(new Color(231, 239, 199));
+        bLogin.setFont(new Font("Segoe UI", Font.BOLD, 14));
+
+        bLogin.putClientProperty("JButton.buttonType", "default");
+        bLogin.putClientProperty("JButton.focusedBackground", new Color(132, 174, 146));
+        bLogin.putClientProperty("JButton.hoverBackground", new Color(112, 154, 126));
+        bLogin.putClientProperty("JButton.pressedBackground", new Color(92, 134, 106));
     }
 
     /**
@@ -29,13 +57,13 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         tUser = new javax.swing.JTextField();
         pPass = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        bLogin = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        lbImg = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -45,31 +73,30 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel3.setText("Pinjam");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, 19));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        jLabel4.setText("RuangSYS");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
-
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("Password");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setText("Username");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-        jPanel1.add(tUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 330, 40));
-        jPanel1.add(pPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 330, 40));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        jPanel1.add(tUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 330, 40));
+        jPanel1.add(pPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 330, 40));
 
-        jButton1.setText("Masuk");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bLogin.setText("Masuk");
+        bLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 330, 40));
+        jPanel1.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 330, 40));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel3.setText("PinjamRuang");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, 30));
+
+        lbImg.setPreferredSize(new java.awt.Dimension(40, 40));
+        jPanel1.add(lbImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 55, 55));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
 
@@ -86,24 +113,23 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGap(88, 88, 88)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(200, 200, 200)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(425, Short.MAX_VALUE))
+                .addContainerGap(292, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
@@ -111,20 +137,19 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           UserModel userModel = new UserModel();
+    private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
+        UserModel userModel = new UserModel();
         try {
             userModel.login(tUser.getText(), pPass.getText(), this);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger
-        (LoginPage.class.getName()).log(Level.SEVERE,
+            Logger.getLogger(LoginPage.class.getName()).log(Level.SEVERE,
                     null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(LoginPage.class.getName()).
                     log(Level.SEVERE, null, ex);
 
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,15 +187,15 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton bLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lbImg;
     private javax.swing.JPasswordField pPass;
     private javax.swing.JTextField tUser;
     // End of variables declaration//GEN-END:variables
