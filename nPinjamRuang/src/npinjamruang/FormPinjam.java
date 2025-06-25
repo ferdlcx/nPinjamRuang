@@ -17,21 +17,21 @@ public class FormPinjam extends javax.swing.JPanel {
         initComponents();
 
         // Format tanggal
-    MaskFormatter dateFormatter = new MaskFormatter("####-##-##");
-    dateFormatter.setPlaceholderCharacter('_');
-    dateFormatter.install(fDate);
+        MaskFormatter dateFormatter = new MaskFormatter("####-##-##");
+        dateFormatter.setPlaceholderCharacter('_');
+        dateFormatter.install(fDate);
 
-    // Format jam mulai
-    MaskFormatter timeFormatterStart = new MaskFormatter("##:##");
-    timeFormatterStart.setPlaceholderCharacter('_');
-    timeFormatterStart.install(fStart);
+        // Format jam mulai
+        MaskFormatter timeFormatterStart = new MaskFormatter("##:##");
+        timeFormatterStart.setPlaceholderCharacter('_');
+        timeFormatterStart.install(fStart);
 
-    // Format jam selesai
-    MaskFormatter timeFormatterEnd = new MaskFormatter("##:##");
-    timeFormatterEnd.setPlaceholderCharacter('_');
-    timeFormatterEnd.install(fEnd);
+        // Format jam selesai
+        MaskFormatter timeFormatterEnd = new MaskFormatter("##:##");
+        timeFormatterEnd.setPlaceholderCharacter('_');
+        timeFormatterEnd.install(fEnd);
     }
-    
+
     private String ruangId;
 
     public void setRuangId(String ruangId) {
@@ -94,6 +94,11 @@ public class FormPinjam extends javax.swing.JPanel {
         jScrollPane1.setViewportView(aTujuan);
 
         bReset.setText("Reset");
+        bReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bResetActionPerformed(evt);
+            }
+        });
 
         bPinjam.setText("Pinjam");
         bPinjam.addActionListener(new java.awt.event.ActionListener() {
@@ -203,8 +208,16 @@ public class FormPinjam extends javax.swing.JPanel {
         String jamSelesai = fEnd.getText().trim();
         String tujuan = aTujuan.getText().trim();
 
-         new PinjamModel().insertData(nama, tanggal, jamMulai, jamSelesai, tujuan);
+        new PinjamModel().insertData(nama, tanggal, jamMulai, jamSelesai, tujuan);
     }//GEN-LAST:event_bPinjamActionPerformed
+
+    private void bResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bResetActionPerformed
+        tUser.setText(null);
+        fDate.setText(null);
+        fEnd.setText(null);
+        fStart.setText(null);
+        aTujuan.setText(null);
+    }//GEN-LAST:event_bResetActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

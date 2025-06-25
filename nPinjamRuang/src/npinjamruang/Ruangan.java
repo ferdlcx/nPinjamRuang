@@ -22,12 +22,11 @@ public class Ruangan extends javax.swing.JPanel {
         this.parent = parent;
         initComponents();
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/img/kelas2.jpg"));
-        Image img = icon.getImage().getScaledInstance(140, 120, Image.SCALE_SMOOTH);
-        lbGambar.setIcon(new ImageIcon(img));
+        lbGambar.setIcon(ImageHelper.getIcon("/img/kelas2.jpg", 140, 120));
+        lbGambar1.setIcon(ImageHelper.getIcon("/img/room1.jpg", 140, 120));
+        lbGambar2.setIcon(ImageHelper.getIcon("/img/kelas2.jpg", 140, 120));
+
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
