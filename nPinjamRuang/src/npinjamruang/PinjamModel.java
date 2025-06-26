@@ -105,12 +105,22 @@ public class PinjamModel {
         try {
             conn = new Koneksi().connect();
             //    searching data berdasarkan nama produk atau kategori produk
-            String sql = "SELECT * FROM peminjaman WHERE nama LIKE ? OR "
-                    + "tanggal LIKE ?";
+            String sql = "SELECT * FROM peminjaman WHERE "
+           + "nama LIKE ? OR "
+           + "tanggal LIKE ? OR "
+           + "jam_mulai LIKE ? OR "
+           + "jam_selesai LIKE ? OR "
+           + "keperluan LIKE ?";
+
             pst = conn.prepareStatement(sql);
             //    gunakan percent sebelum variable untuk mencari nama
             pst.setString(1, "%" + cari + "%");
             pst.setString(2, "%" + cari + "%");
+            pst.setString(3, "%" + cari + "%");
+            pst.setString(4, "%" + cari + "%");
+            pst.setString(5, "%" + cari + "%");
+           
+
 
             rs = pst.executeQuery();
 //             looping data

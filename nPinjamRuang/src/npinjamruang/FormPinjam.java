@@ -16,6 +16,14 @@ public class FormPinjam extends javax.swing.JPanel {
     public FormPinjam() throws ParseException {
         initComponents();
 
+        bReset.putClientProperty("FlatLaf.style", "arc: 15");
+        bPinjam.putClientProperty("FlatLaf.style", "arc: 15");
+        tUser.putClientProperty("FlatLaf.style", "arc: 15");
+        tRuang.putClientProperty("FlatLaf.style", "arc: 15");
+        fDate.putClientProperty("FlatLaf.style", "arc: 15");
+        fStart.putClientProperty("FlatLaf.style", "arc: 15");
+        fEnd.putClientProperty("FlatLaf.style", "arc: 15");
+
         // Format tanggal
         MaskFormatter dateFormatter = new MaskFormatter("####-##-##");
         dateFormatter.setPlaceholderCharacter(' ');
@@ -69,8 +77,8 @@ public class FormPinjam extends javax.swing.JPanel {
         setBackground(new java.awt.Color(231, 239, 199));
         setPreferredSize(new java.awt.Dimension(800, 470));
 
-        jPanel1.setBackground(new java.awt.Color(231, 239, 199));
-        jPanel1.setPreferredSize(new java.awt.Dimension(800, 400));
+        jPanel1.setBackground(new java.awt.Color(238, 232, 169));
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 525));
 
         jLabel2.setText("Nama Peminjam");
 
@@ -148,7 +156,7 @@ public class FormPinjam extends javax.swing.JPanel {
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(fEnd, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(350, 350, 350))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -174,17 +182,15 @@ public class FormPinjam extends javax.swing.JPanel {
                     .addComponent(jLabel7)
                     .addComponent(fStart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fEnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bReset)
                     .addComponent(bPinjam))
-                .addContainerGap())
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -195,9 +201,7 @@ public class FormPinjam extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

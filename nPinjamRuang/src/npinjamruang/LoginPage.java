@@ -24,12 +24,11 @@ public class LoginPage extends javax.swing.JFrame {
     public LoginPage() {
         initComponents();
 
-        lbImg.setIcon(ImageHelper.getIcon("/img/logo.png", 55, 55));
+        lbImg.setIcon(ImageHelper.getIcon("/img/logo_1.png", 55, 55));
 
         bLogin.putClientProperty("FlatLaf.style", "background: #8A784E; foreground: #E7EFC7; arc: 15");
         tUser.putClientProperty("FlatLaf.style", "background: #ffffff; foreground: #8A784E; arc: 15");
         pPass.putClientProperty("FlatLaf.style", "background: #ffffff; foreground: #8A784E; arc: 15");
-
     }
 
     /**
@@ -56,6 +55,7 @@ public class LoginPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login - PinjamRuangSYS");
 
+        jPanel1.setBackground(new java.awt.Color(238, 232, 169));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -70,6 +70,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.add(pPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 330, 40));
 
         bLogin.setText("Masuk");
+        bLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bLoginActionPerformed(evt);
@@ -77,16 +78,18 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel1.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 330, 40));
 
+        jLabel3.setBackground(new java.awt.Color(246, 147, 51));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 144, 117));
         jLabel3.setText("PinjamRuang");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, 30));
 
         lbImg.setPreferredSize(new java.awt.Dimension(40, 40));
         jPanel1.add(lbImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 55, 55));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 128, 157));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 600));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N

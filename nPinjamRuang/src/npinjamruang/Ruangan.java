@@ -22,8 +22,8 @@ public class Ruangan extends javax.swing.JPanel {
         this.parent = parent;
         initComponents();
 
-        lbGambar.setIcon(ImageHelper.getIcon("/img/kelas2.jpg", 140, 120));
-        lbGambar1.setIcon(ImageHelper.getIcon("/img/room1.jpg", 140, 120));
+        lbGambar.setIcon(ImageHelper.getIcon("/img/ruang3.jpg", 140, 120));
+        lbGambar1.setIcon(ImageHelper.getIcon("/img/ruang2.jpg", 140, 120));
         lbGambar2.setIcon(ImageHelper.getIcon("/img/kelas2.jpg", 140, 120));
 
     }
@@ -56,6 +56,7 @@ public class Ruangan extends javax.swing.JPanel {
 
         jButton1.setText("jButton1");
 
+        setBackground(new java.awt.Color(231, 239, 199));
         setPreferredSize(new java.awt.Dimension(600, 525));
         setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 50, 5));
 
@@ -63,7 +64,9 @@ public class Ruangan extends javax.swing.JPanel {
         card.setPreferredSize(new java.awt.Dimension(140, 170));
         card.setLayout(new java.awt.BorderLayout());
 
+        bPinjam1.setBackground(new java.awt.Color(238, 232, 169));
         bPinjam1.setText("Pinjam");
+        bPinjam1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bPinjam1.setPreferredSize(new java.awt.Dimension(75, 30));
         bPinjam1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +75,7 @@ public class Ruangan extends javax.swing.JPanel {
         });
         card.add(bPinjam1, java.awt.BorderLayout.PAGE_END);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 144, 117));
         jPanel2.setPreferredSize(new java.awt.Dimension(140, 20));
 
         jLabel2.setText("R201");
@@ -102,7 +105,9 @@ public class Ruangan extends javax.swing.JPanel {
         card1.setPreferredSize(new java.awt.Dimension(140, 170));
         card1.setLayout(new java.awt.BorderLayout());
 
+        bPinjam2.setBackground(new java.awt.Color(238, 232, 169));
         bPinjam2.setText("Pinjam");
+        bPinjam2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bPinjam2.setPreferredSize(new java.awt.Dimension(75, 30));
         bPinjam2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,10 +116,10 @@ public class Ruangan extends javax.swing.JPanel {
         });
         card1.add(bPinjam2, java.awt.BorderLayout.PAGE_END);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(0, 144, 117));
         jPanel3.setPreferredSize(new java.awt.Dimension(140, 20));
 
-        jLabel3.setText("R201");
+        jLabel3.setText("R202");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -141,7 +146,9 @@ public class Ruangan extends javax.swing.JPanel {
         card2.setPreferredSize(new java.awt.Dimension(140, 170));
         card2.setLayout(new java.awt.BorderLayout());
 
+        bPinjam3.setBackground(new java.awt.Color(238, 232, 169));
         bPinjam3.setText("Pinjam");
+        bPinjam3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bPinjam3.setPreferredSize(new java.awt.Dimension(75, 30));
         bPinjam3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,10 +157,10 @@ public class Ruangan extends javax.swing.JPanel {
         });
         card2.add(bPinjam3, java.awt.BorderLayout.PAGE_END);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(0, 144, 117));
         jPanel4.setPreferredSize(new java.awt.Dimension(140, 20));
 
-        jLabel4.setText("R201");
+        jLabel4.setText("R203");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
