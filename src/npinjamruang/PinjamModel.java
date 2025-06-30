@@ -23,11 +23,11 @@ public class PinjamModel {
     PreparedStatement pst;
     ResultSet rs;
 
-    public void insertData(String nama, String tanggal, String jamMulai, String jamSelesai, String keperluan, String ruangan) {
+    public void insertData(String nama, String tanggal, String jamMulai, String jamSelesai, String keperluan) {
         try {
             conn = new npinjamruang.Koneksi().connect();
 
-            String sql = "INSERT INTO peminjaman (nama, tanggal, jam_mulai, jam_selesai, keperluan, ruangan) VALUES (?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO peminjaman (nama, tanggal, jam_mulai, jam_selesai, keperluan) VALUES (?, ?, ?, ?, ?)";
 
             pst = conn.prepareStatement(sql);
             pst.setString(1, nama);
@@ -35,7 +35,6 @@ public class PinjamModel {
             pst.setString(3, jamMulai);
             pst.setString(4, jamSelesai);
             pst.setString(5, keperluan);
-            pst.setString(6, ruangan);
 
             pst.execute();
             JOptionPane.showMessageDialog(null, "Data berhasil disimpan.");
@@ -65,8 +64,7 @@ public class PinjamModel {
                     rs.getString("tanggal"),
                     rs.getString("jam_mulai"),
                     rs.getString("jam_selesai"),
-                    rs.getString("keperluan"),
-                    rs.getString("ruangan"),};
+                    rs.getString("keperluan"),};
 
 // tambahkan pada model table model dengan data dari objek data
                 dtm.addRow(data);
@@ -107,27 +105,19 @@ public class PinjamModel {
         try {
             conn = new Koneksi().connect();
             //    searching data berdasarkan nama produk atau kategori produk
-            String sql = "SELECT * FROM peminjaman WHERE "
-                    + "nama LIKE ? OR "
-                    + "tanggal LIKE ? OR "
-                    + "jam_mulai LIKE ? OR "
-                    + "jam_selesai LIKE ? OR "
-                    + "keperluan LIKE ?";
-
+            String sql = "SELECT * FROM peminjaman WHERE nama LIKE ? OR "
+                    + "tanggal LIKE ?";
             pst = conn.prepareStatement(sql);
             //    gunakan percent sebelum variable untuk mencari nama
             pst.setString(1, "%" + cari + "%");
             pst.setString(2, "%" + cari + "%");
-            pst.setString(3, "%" + cari + "%");
-            pst.setString(4, "%" + cari + "%");
-            pst.setString(5, "%" + cari + "%");
 
             rs = pst.executeQuery();
 //             looping data
             while (rs.next()) {
 
                 Object[] data = {
-                    rs.getString("id"),
+                     rs.getString("id"),
                     rs.getString("nama"),
                     rs.getString("tanggal"),
                     rs.getString("jam_mulai"),
